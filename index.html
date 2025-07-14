@@ -28,13 +28,13 @@
       </button>
 
       <ul class="hidden md:flex items-center gap-6 text-gray-600 text-sm">
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">Hotels</a></li>
-        <li><a href="#">Flights</a></li>
-        <li><a href="#">Bookings</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="/destination.html">Destinations</a></li>
+        <li><a href="/hotels.html">Hotels</a></li>
+        <li><a href="/flights.html">Flights</a></li>
+        <li><a href="/bookings.html">Bookings</a></li>
+        <li><a href="/login.html">Login</a></li>
         <li>
-          <a href="#" class="border border-orange-500 px-4 py-2 rounded-md text-orange-500 hover:bg-orange-500 hover:text-white transition">
+          <a href="/signup.html" class="border border-orange-500 px-4 py-2 rounded-md text-orange-500 hover:bg-orange-500 hover:text-white transition">
             Sign up
           </a>
         </li>
@@ -42,12 +42,12 @@
     </div>
 
     <div id="mobileMenu" class="md:hidden hidden mt-4 space-y-2 text-gray-700 text-sm">
-      <a href="#" class="block">Destinations</a>
-      <a href="#" class="block">Hotels</a>
-      <a href="#" class="block">Flights</a>
-      <a href="#" class="block">Bookings</a>
-      <a href="#" class="block">Login</a>
-      <a href="#" class="block border border-orange-500 px-4 py-2 rounded-md text-orange-500 hover:bg-orange-500 hover:text-white transition inline-block">
+      <a href="/destination.html" class="block">Destinations</a>
+      <a href="/hotels.html" class="block">Hotels</a>
+      <a href="/flights.html" class="block">Flights</a>
+      <a href="/bookings.html" class="block">Bookings</a>
+      <a href="/login.html" class="block">Login</a>
+      <a href="/signup.html" class="block border border-orange-500 px-4 py-2 rounded-md text-orange-500 hover:bg-orange-500 hover:text-white transition inline-block">
         Sign up
       </a>
     </div>
@@ -240,43 +240,70 @@
  
  
  <section class="bg-white py-16 px-4">
-    <div class="w-full mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-12">
-      
-      
-      <div class="w-full">
-        <p class="text-sm uppercase tracking-widest text-gray-400 mb-2">Testimonials</p>
-        <h2 class="text-4xl font-bold text-gray-900 leading-snug">What People Say <br> About Us.</h2>
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-12">
+    
+    <!-- Left Text -->
+    <div class="w-full md:w-1/2">
+      <p class="text-sm uppercase tracking-widest text-gray-400 mb-2">Testimonials</p>
+      <h2 class="text-4xl font-bold text-gray-900 leading-snug">What People Say <br> About Us.</h2>
 
-       
-        <div class="flex space-x-2 mt-6">
-          <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
-          <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-          <span class="w-2 h-2 bg-gray-300 rounded-full"></span>
-        </div>
+      <!-- Indicators -->
+      <div class="flex space-x-2 mt-6 justify-start" id="slider-indicators">
+        <!-- JavaScript will insert dots here -->
       </div>
+    </div>
 
-      
-      <div class="relative w-full md:w-full">
-        <!-- Bottom Layer (Blurred card behind) -->
-        <div class="absolute top-8 left-4 bg-white rounded-xl shadow-md opacity-50 w-full h-full z-0"></div>
+    <!-- Right Slider -->
+    <div class="relative w-full md:w-1/2">
+      <div class="relative overflow-hidden rounded-xl shadow-lg" id="testimonial-slider">
+        <!-- Testimonial Cards -->
+        <div class="flex transition-transform duration-500 ease-in-out" style="width: 300%; transform: translateX(0%);" id="slider-track">
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0 p-6 bg-white">
+            <p class="text-sm text-gray-700 italic mb-4">
+              “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://img.icons8.com/color/48/user-male-circle--v1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
+              <div>
+                <p class="font-bold text-gray-900">Mike Taylor</p>
+                <p class="text-sm text-gray-500">Lahore, Pakistan</p>
+              </div>
+            </div>
+          </div>
 
-      
-        <div class="relative bg-white p-6 rounded-xl shadow-lg z-10">
-          <p class="text-sm text-gray-700 italic mb-4">
-            “On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”
-          </p>
-          <div class="flex items-center gap-4">
-            <img src="https://img.icons8.com/color/48/user-male-circle--v1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
-            <div>
-              <p class="font-bold text-gray-900">Mike taylor</p>
-              <p class="text-sm text-gray-500">Lahore, Pakistan</p>
+          <!-- Slide 2 -->
+          <div class="w-full flex-shrink-0 p-6 bg-white">
+            <p class="text-sm text-gray-700 italic mb-4">
+              “Amazing experience! This service transformed our workflow completely. The support team is fast and responsive.”
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://img.icons8.com/color/48/user-female-circle--v1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
+              <div>
+                <p class="font-bold text-gray-900">Sara Ahmed</p>
+                <p class="text-sm text-gray-500">Karachi, Pakistan</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="w-full flex-shrink-0 p-6 bg-white">
+            <p class="text-sm text-gray-700 italic mb-4">
+              “A very professional and friendly team. I’ve seen massive improvements since switching to their services.”
+            </p>
+            <div class="flex items-center gap-4">
+              <img src="https://img.icons8.com/color/48/user-male-circle--v1.png" alt="User Avatar" class="w-10 h-10 rounded-full">
+              <div>
+                <p class="font-bold text-gray-900">Ali Khan</p>
+                <p class="text-sm text-gray-500">Islamabad, Pakistan</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </section>
+
+  </div>
 
   <!-- Brand Logos -->
   <section class="py-10 px-4 flex justify-center gap-8 items-center flex-wrap w-full">
@@ -351,6 +378,41 @@
       hamburgerIcon.classList.toggle("hidden");
       closeIcon.classList.toggle("hidden");
     });
+    const track = document.getElementById('slider-track');
+    const indicatorsContainer = document.getElementById('slider-indicators');
+    const totalSlides = 3;
+    let currentIndex = 0;
+
+    // Create indicators
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'w-2 h-2 bg-gray-300 rounded-full cursor-pointer';
+      dot.addEventListener('click', () => goToSlide(i));
+      indicatorsContainer.appendChild(dot);
+    }
+
+    const updateIndicators = () => {
+      [...indicatorsContainer.children].forEach((dot, i) => {
+        dot.className = `w-2 h-2 rounded-full cursor-pointer ${
+          i === currentIndex ? 'bg-gray-400' : 'bg-gray-300'
+        }`;
+      });
+    };
+
+    const goToSlide = (index) => {
+      currentIndex = index;
+      const offset = -100 * index;
+      track.style.transform = `translateX(${offset}%)`;
+      updateIndicators();
+    };
+
+    // Auto-slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      goToSlide(currentIndex);
+    }, 5000);
+
+    updateIndicators();
   </script>
   </body>
 </html>
